@@ -38,9 +38,43 @@ From the image above, we have determined that the file project_k.txt has write p
 
 **chmod o-w project_k.txt**
 ![https://i.imgur.com/PpAYBeN.png](https://i.imgur.com/PpAYBeN.png)
-The first two lines of the screenshot display the commands I entered, and the other lines display the output of the second command. The chmod command changes the permissions on files and directories. The first argument indicates what permissions should be changed, and the second argument specifies the file or directory. In this example, I removed write permissions from other for the project_k.txt file. After this, I used ls -la to review the updates I made.
+The first two lines of the screenshot display the commands I entered, and the other lines display the output of the second command. The **chmod** command changes the permissions on files and directories. The first argument indicates what permissions should be changed, and the second argument specifies the file or directory. In this example, I removed write permissions from other for the project_k.txt file. After this, I used ls -la to review the updates I made.
 
 3.	The file project_m.txt is a restricted file and should not be readable or writable by the group or other; only the user should have these permissions on this file. List the contents and permissions of the current directory and check if the group has read or write permissions.
 4.	Use the chmod command to change permissions of the project_m.txt file so that the group doesn’t have read or write permissions.
 
-**chmod g-r project_m.txt **
+**chmod g-r project_m.txt**
+
+### Change file permissions on a hidden file
+
+In this task, you must determine if a hidden file has incorrect permissions and then change the permissions as needed. This action will further remove unauthorized access and strengthen security on the system.
+
+The file .project_x.txt is a hidden file that has been archived and should not be written to by anyone. (The user and group should still be able to read this file.)
+
+1.	Check the permissions of the hidden file .project_x.txt and answer the question that follows.
+
+![https://i.imgur.com/y2Osrij.png](https://i.imgur.com/y2Osrij.png)
+
+2.	Change the permissions of the file .project_x.txt so that both the user and the group can read, but not write to, the file.
+
+**chmod ug-w .project_x.txt**
+**chmod g+r .project_x.txt**
+
+![https://i.imgur.com/c6l1So4.png](https://i.imgur.com/c6l1So4.png)
+
+### Change directory permissions
+
+In this task, you must change the permissions of a directory. First, you’ll check the group permissions of the /home/researcher2/projects/drafts directory and then modify the permissions as required. (You should be in the projects directory while managing the permissions of its subdirectory drafts.)
+Only the researcher2 user should be allowed to access the drafts directory and its contents. (This means that only researcher2 should have execute privileges.)
+1.	Check the permissions of the drafts directory and answer the following question.
+2.	Remove the execute permission for the group from the drafts directory.
+**chmod g-x drafts**
+![https://i.imgur.com/QjYuh6J.png](https://i.imgur.com/QjYuh6J.png)
+
+The first two lines of the screenshot display the commands I entered, and the other lines display the output of the second command. I previously determined that the group had execute permissions, so I used the chmod command to remove them. The researcher2 user already had execute permissions, so they did not need to be added.
+
+### Summary
+
+I changed multiple permissions to match the level of authorization my organization wanted for files and directories in the projects directory. The first step in this was using ls -la to check the permissions for the directory. This informed my decisions in the following steps. I then used the chmod command multiple times to change the permissions on files and directories.
+
+
