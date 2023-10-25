@@ -71,10 +71,10 @@ Only the researcher2 user should be allowed to access the drafts directory and i
 **chmod g-x drafts**
 ![https://i.imgur.com/QjYuh6J.png](https://i.imgur.com/QjYuh6J.png)
 
-The first two lines of the screenshot display the commands I entered, and the other lines display the output of the second command. I previously determined that the group had execute permissions, so I used the chmod command to remove them. The researcher2 user already had execute permissions, so they did not need to be added.
+The first two lines of the screenshot display the commands I entered, and the other lines display the output of the second command. I previously determined that the group had execute permissions, so I used the **chmod** command to remove them. The **researcher2** user already had execute permissions, so they did not need to be added.
 
 ### Summary
 
-I changed multiple permissions to match the level of authorization my organization wanted for files and directories in the projects directory. The first step in this was using ls -la to check the permissions for the directory. This informed my decisions in the following steps. I then used the chmod command multiple times to change the permissions on files and directories.
+I changed multiple permissions to match the level of authorization my organization wanted for files and directories in the **projects** directory. The first step in this was using **ls -la** to check the permissions for the directory. This informed my decisions in the following steps. I then used the **chmod** command multiple times to change the permissions on files and directories.
 
 
