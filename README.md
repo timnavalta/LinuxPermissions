@@ -13,3 +13,4 @@ Typing **ls –al** allows us to display the list of names and features of files
 The ls command is one of the more basic commands in Linux. It is designed to list the names of files and directories. With the –al argument, -a lists all files including those that begin with . and l do not list implied entries matching shell PATTERN.
 
 Now using the results in the figure, it shows different names of users and groups as well as their respective permissions.
+https://imgur.com/pS8JkaY
