@@ -25,3 +25,22 @@ The 10-character string can be deconstructed to determine who is authorized to a
 
 For example, the file permissions for project_t.txt are -rw-rw-r--. Since the first character is a hyphen (-), this indicates that project_t.txt is a file, not a directory. The second, fifth, and eighth characters are all r, which indicates that user, group, and other all have read permissions. The third and sixth characters are w, which indicates that only the user and group have write permissions. No one has execute permissions for project_t.txt.
 ![https://i.imgur.com/xJIzZXi.png](https://i.imgur.com/xJIzZXi.png)
+
+### Change file permissions
+
+In this task, you must determine whether any files have incorrect permissions and then change the permissions as needed. This action will remove unauthorized access and strengthen security on the system.
+None of the files should allow the other users to write to files.
+1.	Check whether any files in the projects directory have **write** permissions for the owner type of other. 
+-	From the figure shown above, we can see the project_k.txt has write permissions for others.
+2.	Change the permissions of the file identified in the previous step so that the owner type of other doesn’t have write permissions.
+![https://i.imgur.com/CELySdN.png](https://i.imgur.com/CELySdN.png)
+From the image above, we have determined that the file project_k.txt has write permissions for other. We are going to remove the write permissions using the **chmod** command.
+
+**chmod o-w project_k.txt**
+![https://i.imgur.com/PpAYBeN.png](https://i.imgur.com/PpAYBeN.png)
+The first two lines of the screenshot display the commands I entered, and the other lines display the output of the second command. The chmod command changes the permissions on files and directories. The first argument indicates what permissions should be changed, and the second argument specifies the file or directory. In this example, I removed write permissions from other for the project_k.txt file. After this, I used ls -la to review the updates I made.
+
+3.	The file project_m.txt is a restricted file and should not be readable or writable by the group or other; only the user should have these permissions on this file. List the contents and permissions of the current directory and check if the group has read or write permissions.
+4.	Use the chmod command to change permissions of the project_m.txt file so that the group doesn’t have read or write permissions.
+
+**chmod g-r project_m.txt **
